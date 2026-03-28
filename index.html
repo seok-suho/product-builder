@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NBA Player Showcase</title>
+    <meta name="description" content="NBA Player Showcase - Explore stats and info of top NBA stars like LeBron James, Stephen Curry, and more.">
+    <link rel="canonical" href="https://product-builder-2kn.pages.dev/">
+    
+    <!-- Google AdSense Verification -->
+    <meta name="google-adsense-account" content="ca-pub-2921285587331991">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2921285587331991" crossorigin="anonymous"></script>
+    
+    <title>NBA Player Showcase | Top NBA Stars Stats</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,40 +20,50 @@
     <header>
         <div class="container">
             <h1>NBA STARS</h1>
+            <p class="site-intro">Discover real-time stats and career highlights of your favorite NBA players.</p>
             <div class="search-box">
-                <input type="text" id="player-search" placeholder="Search players by name...">
+                <input type="text" id="player-search" placeholder="Search players by name (e.g. LeBron, Curry)...">
             </div>
         </div>
     </header>
 
     <main class="container">
+        <!-- Static Content for Crawlers -->
+        <section class="intro-text">
+            <h2>Explore the Best of the NBA</h2>
+            <p>Welcome to the NBA Player Showcase. We provide up-to-date performance metrics, team information, and position analysis for the league's top athletes including LeBron James, Stephen Curry, Nikola Jokic, and Jayson Tatum.</p>
+        </section>
+
         <div id="player-grid" class="player-grid">
-            <!-- Cards will be injected here by JS -->
+            <!-- Cards will be dynamically injected here by main.js -->
+            <div class="loading-placeholder">
+                <p>Loading the latest player data...</p>
+            </div>
         </div>
     </main>
 
     <section class="contact-section container">
         <div class="contact-card">
-            <h2>제휴 문의</h2>
-            <p>협업 및 제휴 제안을 기다립니다.</p>
+            <h2>제휴 문의 (Partnership)</h2>
+            <p>We are open for collaborations and business inquiries related to sports data and media.</p>
             <form action="https://formspree.io/f/xnjojovg" method="POST">
                 <div class="form-group">
-                    <label for="name">성함</label>
+                    <label for="name">성함 (Name)</label>
                     <input type="text" id="name" name="name" placeholder="홍길동" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">이메일 주소</label>
+                    <label for="email">이메일 주소 (Email)</label>
                     <input type="email" id="email" name="_replyto" placeholder="example@email.com" required>
                 </div>
                 <div class="form-group">
-                    <label for="company">회사명/소속</label>
+                    <label for="company">회사명/소속 (Company)</label>
                     <input type="text" id="company" name="company" placeholder="회사명">
                 </div>
                 <div class="form-group">
-                    <label for="message">문의 내용</label>
+                    <label for="message">문의 내용 (Message)</label>
                     <textarea id="message" name="message" rows="5" placeholder="문의하실 내용을 입력해주세요." required></textarea>
                 </div>
-                <button type="submit" class="submit-btn">보내기</button>
+                <button type="submit" class="submit-btn">보내기 (Submit)</button>
             </form>
         </div>
     </section>
@@ -54,16 +71,7 @@
     <section class="comments-section container">
         <div id="disqus_thread"></div>
         <script>
-            /**
-            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-            /*
-            var disqus_config = function () {
-            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            */
-            (function() { // DON'T EDIT BELOW THIS LINE
+            (function() { 
             var d = document, s = d.createElement('script');
             s.src = 'https://productbuilder-1udpqy9kaj.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
@@ -74,7 +82,12 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 NBA Showcase. For Educational Purposes.</p>
+        <div class="container">
+            <p>&copy; 2026 NBA Showcase. For Educational and Information Purposes.</p>
+            <nav class="footer-links">
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </nav>
+        </div>
     </footer>
 
     <script src="main.js"></script>
